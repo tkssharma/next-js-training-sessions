@@ -1,86 +1,30 @@
-# Part 01
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-In this tutorial we will setup our [Next.js](https://github.com/zeit/next.js) application and install the necessary dependencies to get starting building a Server Side Rendered React store from scratch with the [moltin](https://moltin.com).
+## Getting Started
 
-
-### Setup
-
-You'll want to create a directory for your project and change directory into your newly created project. Throughout this tutorial I have named my project `nextjs-app`.
+First, run the development server:
 
 ```bash
-mkdir nextjs-app
-cd nextjs-app
+npm run dev
+# or
+yarn dev
 ```
 
-### Install dependencies
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Now you're inside the folder, we need to install our dependencies. Next.js allows us to bring our own version of React and React DOM.
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-We will use [Yarn](https://yarnpkg.com/en/docs/install) and specify the `-E` flag to make sure we're installing the current available package version.
+## Learn More
 
-```bash
-yarn add -E react react-dom next
-```
+To learn more about Next.js, take a look at the following resources:
 
-### Configure scripts
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-With our dependencies installed, you'll want to open your project inside your code editor and open the `package.json` file.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Inside the `package.json` we are going to add the required `scripts` to `start`, `build` and serve our application in development (`dev`).
+## Deploy on Vercel
 
-I'd recommend adding these above the dependencies list, so they're easier to find when you install additional dependencies later.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```json
-"scripts": {
-  "dev": "next",
-  "build": "next build",
-  "start": "next start"
-},
-```
-
-### Create an index page
-
-Before we invoke the `dev` script, we need to create an index page. Right now we'll output 'hello world' to the screen. This page will later show all our products.
-
-Next.js was built with the convention over configuration approach, so as long as we follow the Next.js conventions, we should get up and running fairly quickly.
-
-Create a directory called `pages`, and inside that folder, create a file called `index.js`. You can use your code editor or your command line to do this.
-
-```bash
-mkdir pages
-touch pages/index.js
-```
-
-Inside of `pages/index.js` we're going to output `Hello world`. You don't need to import React either, Next.js takes care of this for us.
-
-```js
-export default () => <h1>Hello world</h1>
-```
-
-### Start the development
-
-We're now able to run our project and see `Hello world` in our browser. To do this...
-
-```bash
-yarn dev # or npm run dev
-```
-
-Next.js will greet you that your application is running at [http://localhost:3000](http://localhost:3000) by default.
-
-```bash
-touch next.config.js
-```
-
-Inside this file, you will want to place the following code;
-
-```js
-module.exports = {
-  webpack: config => {
-    config.node = {
-      fs: 'empty'
-    }
-
-    return config
-  }
-}
-```
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
