@@ -1,0 +1,25 @@
+{
+	"name": "next-js-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start -p 8001",
+		"start-prod": "NODE_ENV=production node server.js",
+		"now-build": "next build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"next": "^8.1.0",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6"
+	},
+	"dependencies": {
+		"express": "^4.17.1",
+		"isomorphic-unfetch": "^3.0.0"
+	}
+}
