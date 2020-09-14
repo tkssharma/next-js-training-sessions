@@ -12,7 +12,7 @@ const Index = (props) => (
 						<a>{show.name}</a>
 					</Link>
 				</li>
-			))}
+			))} 
 		</ul>
 		<style jsx>{`
 			h1, a {

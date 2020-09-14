@@ -5,7 +5,7 @@ import { Component } from "react";
 
 export default class About extends Component {
   static async getInitialProps() {
-    const res = await fetch("https://api.github.com/users/reedbarger");
+    const res = await fetch("https://api.github.com/users/tkssharma");
     const statusCode = res.status > 200 ? res.status : false;
     const data = await res.json();
 
